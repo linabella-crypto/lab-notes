@@ -39,6 +39,8 @@ Use the wording closest to your lab question, then click the notebook.
 | generate a random integer, coin toss, or dice roll | `np.random.randint(low, high)` | [Logic, loops, and simulation](06_logic_loops_and_simulation.ipynb) |
 | simulate the same chance experiment many times | outer trial loop + list of final outcomes | [Logic, loops, and simulation](06_logic_loops_and_simulation.ipynb) |
 | simulate and plot many random walks | list of walks → `np.array(...)` → transpose with `.T` → `plt.plot(...)` | [NumPy random walks](03_numpy_random_walks.ipynb) |
+| estimate the chance a random walk finishes at 60 or higher | simulate many walks → collect `walk[-1]` → `np.mean(final_positions >= 60)` | [NumPy random walks](03_numpy_random_walks.ipynb) |
+| estimate the chance a random walk ever reaches 60 | keep each full walk → `np.mean([max(walk) >= 60 for walk in walks])` | [NumPy random walks](03_numpy_random_walks.ipynb) |
 | choose a plot | Line: `plt.plot`; relationship: `plt.scatter`; distribution: `plt.hist` | [Logic, loops, and simulation](06_logic_loops_and_simulation.ipynb) |
 | label, scale, or clear a plot | `plt.xlabel`, `plt.ylabel`, `plt.title`, `plt.xscale`, `plt.clf()` | [NumPy random walks](03_numpy_random_walks.ipynb) |
 
