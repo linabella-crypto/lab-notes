@@ -20,9 +20,12 @@ Use the wording closest to your lab question, then click the notebook.
 | --- | --- | --- |
 | keep several lists or histories together | List of lists: `all_walks = []`, then `.append(one_history)` | [Lists, arrays, and indexing](04_lists_arrays_and_indexing.ipynb) |
 | turn nested numerical data into one object I can calculate with | `np.array(nested_list)` | [Lists, arrays, and indexing](04_lists_arrays_and_indexing.ipynb) |
+| understand the dimensions or meaning of a NumPy array | `array.shape`; identify what one row and one column represent | [NumPy random walks](03_numpy_random_walks.ipynb) |
+| change the orientation of 2-D data | `array.T` or `np.transpose(array)`—only if rows are not the thing you need to compare | [NumPy random walks](03_numpy_random_walks.ipynb) |
 | get one row, value, or range from nested data | List: `data[row][column]`; NumPy: `array[row, column]`; slice: `start:end` | [Lists, arrays, and indexing](04_lists_arrays_and_indexing.ipynb) |
 | select a whole row or column from a NumPy array | Row: `array[row, :]`; column: `array[:, column]` | [Lists, arrays, and indexing](04_lists_arrays_and_indexing.ipynb) |
 | change, add, delete, or sort list values | assignment, `.append(...)`, `del`, `sorted(...)` | [Lists, arrays, and indexing](04_lists_arrays_and_indexing.ipynb) |
+| keep a small related group of values from changing | Tuple: `(x, y)` or `(red, green, blue)` | [Lists, arrays, and indexing](04_lists_arrays_and_indexing.ipynb) |
 | look up information by a meaningful name | Dictionary: `my_dict[key]` | [Dictionaries and pandas](05_dictionaries_and_pandas.ipynb) |
 | access data inside a dictionary within a dictionary | `my_dict[outer_key][inner_key]` | [Dictionaries and pandas](05_dictionaries_and_pandas.ipynb) |
 | turn a dictionary into a spreadsheet-like table | `pd.DataFrame(my_dict)` | [Dictionaries and pandas](05_dictionaries_and_pandas.ipynb) |
@@ -37,6 +40,7 @@ Use the wording closest to your lab question, then click the notebook.
 | loop through a dictionary, NumPy array, or DataFrame | `.items()`, `np.nditer(...)`, `.iterrows()` / `.apply(...)` | [Logic, loops, and simulation](06_logic_loops_and_simulation.ipynb) |
 | visit every node in a binary tree | Recursive DFS: base case `if node is None`, then visit children | [Trees and DFS](02_trees_and_dfs.ipynb) |
 | generate a random integer, coin toss, or dice roll | `np.random.randint(low, high)` | [Logic, loops, and simulation](06_logic_loops_and_simulation.ipynb) |
+| give an event a chosen small probability | `np.random.rand() <= probability` | [Logic, loops, and simulation](06_logic_loops_and_simulation.ipynb) |
 | simulate the same chance experiment many times | outer trial loop + list of final outcomes | [Logic, loops, and simulation](06_logic_loops_and_simulation.ipynb) |
 | simulate and plot many random walks | list of walks → `np.array(...)` → transpose with `.T` → `plt.plot(...)` | [NumPy random walks](03_numpy_random_walks.ipynb) |
 | estimate the chance a random walk finishes at 60 or higher | simulate many walks → collect `walk[-1]` → `np.mean(final_positions >= 60)` | [NumPy random walks](03_numpy_random_walks.ipynb) |
